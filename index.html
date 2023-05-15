@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code Crafters</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/our_project.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&#038;display=swap" rel="stylesheet" />
+
+<style>
+    /* Start Global Rules */
+    * {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+   
+
+      .main-title {
+        text-transform: uppercase;
+        margin: 0 auto 80px;
+        border: 2px solid black;
+        padding: 10px 20px;
+        font-size: 30px;
+        width: fit-content;
+        position: relative;
+        z-index: 1;
+        transition: var(--main-transition);
+      }
+      .main-title::before,
+      .main-title::after {
+        content: "";
+        width: 12px;
+        height: 12px;
+        background-color: var(--main-color);
+        position: absolute;
+        border-radius: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      .main-title::before {
+        left: -30px;
+      }
+      .main-title::after {
+        right: -30px;
+      }
+      .main-title:hover::before {
+        z-index: -1;
+        animation: left-move 0.5s linear forwards;
+      }
+      .main-title:hover::after {
+        z-index: -1;
+        animation: right-move 0.5s linear forwards;
+      }
+      .main-title:hover {
+        color: white;
+        border: 2px solid white;
+        transition-delay: 0.5s;
+      }
+      .spikes {
+        position: relative;
+      }
+      .spikes::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        width: 100%;
+        height: 30px;
+        z-index: 1;
+        background-image: linear-gradient(135deg, white 25%, transparent 25%),
+          linear-gradient(225deg, white 25%, transparent 25%);
+        background-size: 30px 30px;
+      }
+      .dots {
+        background-image: url("../imgs/dots.png");
+        height: 186px;
+        width: 204px;
+        background-repeat: no-repeat;
+        position: absolute;
+      }
+      .dots-up {
+        top: 200px;
+        right: 0;
+      }
+      .dots-down {
+        bottom: 200px;
+        left: 0;
+      }
+      /* End Global Rules */
+</style>
+</head>
+  <body>
+    <!-- Start Header -->
+    <div class="header" id="header">
+      <div class="container">
+        <a href="#" class="logo">CodeCrafters</a>
+        <ul class="main-nav">
+          <li><a href="#articles">Articles</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#features">Features</a></li>
+          <li>
+            <a href="#">Other Links</a>
+            <!-- Start Megamenu -->
+            <div class="mega-menu">
+              <div class="image">
+                <img decoding="async" src="imgs/megamenu.png" alt="" />
+              </div>
+              <ul class="links">
+                <li>
+                  <a href="#testimonials"><i class="far fa-comments fa-fw"></i> Testimonials</a>
+                </li>
+                <li>
+                  <a href="#team"><i class="far fa-user fa-fw"></i> Team Members</a>
+                </li>
+                <li>
+                  <a href="#services"><i class="far fa-building fa-fw"></i> Services</a>
+                </li>
+                <li>
+                  <a href="#our-skills"><i class="far fa-check-circle fa-fw"></i> Our Skills</a>
+                </li>
+                <li>
+                  <a href="#work-steps"><i class="far fa-clipboard fa-fw"></i> How It Works</a>
+                </li>
+              </ul>
+              <ul class="links">
+                <li>
+                  <a href="#events"><i class="far fa-calendar-alt fa-fw"></i> Events</a>
+                </li>
+                <li>
+                  <a href="#pricing"><i class="fas fa-server fa-fw"></i> Pricing Plans</a>
+                </li>
+                <li>
+                  <a href="#stats"><i class="far fa-chart-bar fa-fw"></i> Stats</a>
+                </li>
+                <li>
+                  <a href="#discount"><i class="fas fa-percent fa-fw"></i> Request A Discount</a>
+                </li>
+              </ul>
+            </div>
+            <!-- End Megamenu -->
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- End Header -->
+    <!-- Start Landing -->
+    <div class="landing">
+      <div class="container">
+        <div class="text">
+          <h1>Welcome, To Code Crafters World</h1>
+          <p>Discover our cutting-edge software solutions and take your business to the next level.</p>
+        </div>
+        <div class="image">
+          <img decoding="async" src="imgs/landing-image.png" alt="" />
+        </div>
+      </div>
+      <a href="#articles" class="go-down">
+        <i class="fas fa-angle-double-down fa-2x"></i>
+      </a>
+    </div>
+    <!-- End Landing -->
+    <!-- Start Articles -->
+    <div class="articles" id="articles">
+      <h2 class="main-title">Articles</h2>
+      <div class="container">
+        <div class="box">
+          <img decoding="async" src="imgs/cat-01.jpg" alt="" />
+          <div class="content">
+            <h3>Why Agile Development is Crucial for Software Projects</h3>
+            <p>Agile software development has become popular for its ability to quickly adapt to changing requirements and market conditions. In this article, we explore the key principles of Agile development and why they are essential for successful software projects.</p>
+          </div>
+          <div class="info">
+            <a href="">Read More</a>
+            <i class="fas fa-long-arrow-alt-right"></i>
+          </div>
+        </div>
+        <div class="box">
+          <img decoding="async" src="imgs/cat-02.jpg" alt="" />
+          <div class="content">
+            <h3>The Rise of DevOps</h3>
+            <p>DevOps has revolutionized the way software development teams operate, by combining development and operations into a seamless and collaborative process. In this article, we explore the benefits of DevOps and how it can improve the efficiency, quality, and speed of software delivery.</p>
+          </div>
+          <div class="info">
+            <a href="">Read More</a>
+            <i class="fas fa-long-arrow-alt-right"></i>
+          </div>
+        </div>
+        <div class="box">
+          <img decoding="async" src="imgs/cat-03.jpg" alt="" />
+          <div class="content">
+            <h3>The Future of Artificial Intelligence</h3>
+            <p>Opportunities and Challenges" - This article explores the current state of AI and the potential opportunities and challenges it presents in the near future.</p>
+          </div>
+          <div class="info">
+            <a href="">Read More</a>
+            <i class="fas fa-long-arrow-alt-right"></i>
+          </div>
+        </div>
+        <div class="box">
+          <img decoding="async" src="imgs/cat-04.jpg" alt="" />
+          <div class="content">
+            <h3>Blockchain Technology</h3>
+            <p>Revolutionizing Industries" - This article delves into the transformative power of blockchain technology and how it's revolutionizing industries like finance, healthcare, and more.</p>
+          </div>
+          <div class="info">
+            <a href="">Read More</a>
+            <i class="fas fa-long-arrow-alt-right"></i>
+          </div>
+        </div>
+        <div class="box">
+          <img decoding="async" src="imgs/cat-05.jpg" alt="" />
+          <div class="content">
+            <h3>Cloud Computing</h3>
+            <p>The Benefits and Risks" - This article examines the benefits and risks of cloud computing and its impact on businesses of all sizes.</p>
+          </div>
+          <div class="info">
+            <a href="">Read More</a>
+            <i class="fas fa-long-arrow-alt-right"></i>
+          </div>
+        </div>
+        <div class="box">
+          <img decoding="async" src="imgs/cat-06.jpg" alt="" />
+          <div class="content">
+            <h3>Internet of Things (IoT)</h3>
+            <p>Connecting Devices and Data" - This article explains the concept of IoT and how it's connecting devices and data to create a more interconnected world.</p>
+          </div>
+          <div class="info">
+            <a href="">Read More</a>
+            <i class="fas fa-long-arrow-alt-right"></i>
+          </div>
+        </div>
+        <div class="box">
+          <img decoding="async" src="imgs/cat-07.jpg" alt="" />
+          <div class="content">
+            <h3>DevOps: Improving Collaboration and Efficiency</h3>
+            <p>This article discusses the DevOps methodology and how it improves collaboration and efficiency in software development.</p>
+          </div>
+          <div class="info">
+            <a href="">Read More</a>
+            <i class="fas fa-long-arrow-alt-right"></i>
+          </div>
+        </div>
+        <div class="box">
+          <img decoding="async" src="imgs/cat-08.jpg" alt="" />
+          <div class="content">
+            <h3>Cybersecurity Threats: Protecting Your Business</h3>
+            <p>This article highlights the importance of cybersecurity and provides tips for protecting your business against cyber threats.</p>
+          </div>
+          <div class="info">
+            <a href="">Read More</a>
+            <i class="fas fa-long-arrow-alt-right"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="spikes"></div>
+    <!-- End Articles -->
+    <!-- Start Gallery -->
+    <div class="gallery" id="gallery">
+      <h2 class="main-title">Gallery</h2>
+      <div class="container">
+        <div class="box">
+          <div class="image">
+            <img decoding="async" src="imgs/gallery-01.png" alt="" />
+          </div>
+        </div>
+        <div class="box">
+          <div class="image">
+            <img decoding="async" src="imgs/gallery-02.png" alt="" />
+          </div>
+        </div>
+        <div class="box">
+          <div class="image">
+            <img decoding="async" src="imgs/gallery-03.jpg" alt="" />
+          </div>
+        </div>
+        <div class="box">
+          <div class="image">
+            <img decoding="async" src="imgs/gallery-04.png" alt="" />
+          </div>
+        </div>
+        <div class="box">
+          <div class="image">
+            <img decoding="async" src="imgs/gallery-05.jpg" alt="" />
+          </div>
+        </div>
+        <div class="box">
+          <div class="image">
+            <img decoding="async" src="imgs/gallery-06.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Gallery -->
+    <!-- Start Features -->
+    <div class="features" id="features">
+      <h2 class="main-title">Features</h2>
+      <div class="container">
+        <div class="box quality">
+          <div class="img-holder"><img decoding="async" src="imgs/features-01.jpg" alt="" /></div>
+          <h2>Quality</h2>
+          <p>Our software solutions are designed to save you time and boost efficiency. We prioritize meeting deadlines and delivering high-quality work promptly.</p>
+          <a href="#">More</a>
+        </div>
+        <div class="box time">
+          <div class="img-holder"><img decoding="async" src="imgs/features-02.jpg" alt="" /></div>
+          <h2>Time</h2>
+          <p>At our software solutions company, we prioritize quality to build trust and maintain long-term client relationships. We deliver high-quality work consistently.</p>
+          <a href="#">More</a>
+        </div>
+        <div class="box passion">
+          <div class="img-holder"><img decoding="async" src="imgs/features-03.jpg" alt="" /></div>
+          <h2>Passion</h2>
+          <p>We're passionate about creating innovative software solutions to achieve your business goals. Our dedicated team is committed to exceeding your expectations with exceptional results.</p>
+          <a href="#">More</a>
+        </div>
+      </div>
+    </div>
+    <!-- End Features -->
+    <!-- Start Testimonials -->
+    <div class="testimonials" id="testimonials">
+      <h2 class="main-title">Testimonials</h2>
+      <div class="container">
+        <div class="box">
+          <img decoding="async" src="imgs/avatar-01.png" alt="" />
+          <h3>Mohamed Farag</h3>
+          <span class="title">Full Stack Developer</span>
+          <div class="rate">
+            <i class="filled fas fa-star"></i>
+            <i class="filled fas fa-star"></i>
+            <i class="filled fas fa-star"></i>
+            <i class="filled fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+          <p>
+            "I was impressed with the software solutions provided by this company. They were able to understand our requirements and deliver high-quality work on time. I would highly recommend them to anyone looking for reliable software development services."
+          </p>          
+        </div>
+        <div class="box">
+          <img decoding="async" src="imgs/avatar-02.png" alt="" />
+          <h3>Mohamed Ibrahim</h3>
+          <span class="title">Full Stack moblie Developer</span>
+          <div class="rate">
+            <i class="filled fas fa-star"></i>
+            <i class="filled fas fa-star"></i>
+            <i class="filled fas fa-star"></i>
+            <i class="filled fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+          <p>
+            Our company had a fantastic experience working with this software solutions provider. They delivered high-quality work in a timely manner and were able to meet all of our requirements.
+          </p>
+        </div>
+        <div class="box">
+          <img decoding="async" src="imgs/avatar-03.png" alt="" />
+          <h3>Shady Nabil</h3>
+          <span class="title">Full Stack web Developer</span>
+          <div class="rate">
+            <i class="filled fas fa-star"></i>
+            <i class="filled fas fa-star"></i>
+            <i class="filled fas fa-star"></i>
+            <i class="filled fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+          <p>
+            We were impressed by the level of expertise and professionalism displayed by this software solutions company. They were able to provide valuable insights and delivered a great product.
+          </p>
+        </div>
+        <div class="box">
+          <img decoding="async" src="imgs/avatar-04.png" alt="" />
+          <h3>Amr Hendawy</h3>
+          <span class="title">UI/UX Designer</span>
+          <div class="rate">
+            <i class="filled fas fa-star"></i>
+            <i class="filled fas fa-star"></i>
+            <i class="filled fas fa-star"></i>
+            <i class="filled fas fa-star"></i>
+            <i class="filled fas fa-star"></i>
+          </div>
+          <p>
+            I have worked with many software solutions providers over the years, and this company stands out for their exceptional technical skills and attention to detail.
+          </p>
+        </div>
+        <div class="box">
+          <img decoding="async" src="imgs/avatar-05.png" alt="" />
+          <h3>Sherief Ashraf</h3>
+          <span class="title"> DevOps Engineer</span>
+          <div class="rate">
+            <i class="filled fas fa-star"></i>
+            <i class="filled fas fa-star"></i>
+            <i class="filled fas fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+          <p>
+            We were very pleased with the results of our project with this software solutions company. They were able to take our ideas and turn them into a functional and user-friendly product.
+          </p>
+        </div>
+        <div class="box">
+          <img decoding="async" src="imgs/avatar-06.png" alt="" />
+          <h3>Osama Mohamed</h3>
+          <span class="title">Quality Assurance Engineer</span>
+          <div class="rate">
+            <i class="filled fas fa-star"></i>
+            <i class="filled fas fa-star"></i>
+            <i class="filled fas fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+          <p>
+            had a great experience working with this company. The team was knowledgeable, professional, and delivered high-quality results. They were also very responsive and communicative throughout the project. I highly recommend their services.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- End Testimonials -->
+    <!-- Start Team -->
+    <div class="team" id="team">
+      <h2 class="main-title">Team Members</h2>
+      <div class="container">
+        <div class="box">
+          <div class="data">
+            <img decoding="async" src="imgs/team-01.jpg" alt="" />
+          </div>
+          <div class="info">
+            <h3>Ahmed Ali</h3>
+            <p>Full Stack Developer with experience in building complex web applications using React, Node.js, and MongoDB.</p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="data">
+            <img decoding="async" src="imgs/team-02.jpg" alt="" />
+          </div>
+          <div class="info">
+            <h3>Mariam Hassan</h3>
+            <p>UI/UX Designer with a passion for creating visually stunning and user-friendly interfaces. Skilled in Adobe XD and Figma.</p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="data">
+            <img decoding="async" src="imgs/team-03.jpg" alt="" />
+          </div>
+          <div class="info">
+            <h3>Omar Mahmoud</h3>
+            <p>Senior Backend Developer with expertise in Java and Spring Framework. Experienced in building RESTful APIs and microservices.</p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="data">
+            <img decoding="async" src="imgs/team-04.jpg" alt="" />
+          </div>
+          <div class="info">
+            <h3>Fatma Mohammed</h3>
+            <p>Frontend Developer with a focus on Angular and React frameworks. Experienced in building responsive and dynamic web applications.</p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="data">
+            <img decoding="async" src="imgs/team-05.png" alt="" />
+          </div>
+          <div class="info">
+            <h3>Ali Ibrahim</h3>
+            <p>DevOps Engineer with experience in managing cloud infrastructure and CI/CD pipelines using AWS and Jenkins.</p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="data">
+            <img decoding="async" src="imgs/team-06.png" alt="" />
+          </div>
+          <div class="info">
+            <h3>Salma Nasser</h3>
+            <p>Project Manager with experience in managing multiple software development projects using Agile methodology. Skilled in Jira and Trello.</p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="data">
+            <img decoding="async" src="imgs/team-07.jpg" alt="" />
+          </div>
+          <div class="info">
+            <h3>Khalid Mustafa</h3>
+            <p>Database Administrator with expertise in MySQL and MongoDB. Experienced in designing and optimizing databases for high performance and scalability.</p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="data">
+            <img decoding="async" src="imgs/team-08.jpg" alt="" />
+          </div>
+          <div class="info">
+            <h3>Aisha Salem</h3>
+            <p>Quality Assurance Engineer with a focus on manual and automated testing. Experienced in Selenium, JUnit, and TestNG frameworks.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="spikes"></div>
+    <!-- End Team -->
+    <!-- Start Services -->
+    <div class="services" id="services">
+      <h2 class="main-title">Services</h2>
+      <div class="container">
+        <div class="box">
+          <i class="fas fa-user-shield fa-4x"></i>
+          <h3>Security</h3>
+          <div class="info">
+            <a href="#">Details</a>
+          </div>
+        </div>
+        <div class="box">
+          <i class="fas fa-tools fa-4x"></i>
+          <h3>Fixing Issues</h3>
+          <div class="info">
+            <a href="#">Details</a>
+          </div>
+        </div>
+        <div class="box">
+          <i class="fas fa-map-marked-alt fa-4x"></i>
+          <h3>Location</h3>
+          <div class="info">
+            <a href="#">Details</a>
+          </div>
+        </div>
+        <div class="box">
+          <i class="fas fa-laptop-code fa-4x"></i>
+          <h3>Coding</h3>
+          <div class="info">
+            <a href="#">Details</a>
+          </div>
+        </div>
+        <div class="box">
+          <i class="fas fa-palette fa-4x"></i>
+          <h3>Security</h3>
+          <div class="info">
+            <a href="#">Design</a>
+          </div>
+        </div>
+        <div class="box">
+          <i class="fas fa-bullhorn fa-4x"></i>
+          <h3>Marketing</h3>
+          <div class="info">
+            <a href="#">Details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Services -->
+    <!-- Start Skills -->
+    <div class="our-skills" id="our-skills">
+      <h2 class="main-title">Our Skills</h2>
+      <div class="container">
+        <img decoding="async" src="imgs/skills.png" alt="" />
+        <div class="skills">
+          <div class="skill">
+            <h3>HTML <span>100%</span></h3>
+            <div class="the-progress">
+              <span style="width: 100%"></span>
+            </div>
+          </div>
+          <div class="skill">
+            <h3>CSS <span>95%</span></h3>
+            <div class="the-progress">
+              <span style="width: 95%"></span>
+            </div>
+          </div>
+          <div class="skill">
+            <h3>JavaScript <span>85%</span></h3>
+            <div class="the-progress">
+              <span style="width: 85%"></span>
+            </div>
+          </div>
+          <div class="skill">
+            <h3>Python <span>80%</span></h3>
+            <div class="the-progress">
+              <span style="width: 80%"></span>
+            </div>
+          </div>
+          <div class="skill">
+            <h3>Dart <span>85%</span></h3>
+            <div class="the-progress">
+              <span style="width: 85%"></span>
+            </div>
+          </div>
+          <div class="skill">
+            <h3>Flutter <span>90%</span></h3>
+            <div class="the-progress">
+              <span style="width: 90%"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Skills -->
+    <!-- Start Work Steps -->
+    <div class="work-steps" id="work-steps">
+      <h2 class="main-title">How It Works ?</h2>
+      <div class="container">
+        <img decoding="async" src="imgs/work-steps.png" alt="" class="image" />
+        <div class="info">
+          <div class="box">
+            <img decoding="async" src="imgs/work-steps-1.png" alt="" />
+            <div class="text">
+              <h3>Business Analysis</h3>
+              <p>
+                Our team of business analysts work with you to define project goals and requirements, identify risks and challenges,
+                 and create a plan for successful project delivery.
+              </p>
+            </div>
+          </div>
+          <div class="box">
+            <img decoding="async" src="imgs/work-steps-2.png" alt="" />
+            <div class="text">
+              <h3>Architecture</h3>
+              <p>
+                Our architecture team provides guidance and direction for the overall technical design of your project. 
+                They ensure that the software and hardware components work together seamlessly to meet the requirements and goals of the project.
+              </p>
+            </div>
+          </div>
+          <div class="box">
+            <img decoding="async" src="imgs/work-steps-3.png" alt="" />
+            <div class="text">
+              <h3>Developement</h3>
+              <p>
+                Our development team turns your project vision into reality. They use the latest tools and technologies to build reliable, scalable, 
+                and high-performance solutions that meet your needs and exceed your expectations.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Work Steps -->
+    <!-- Start Events -->
+    <div class="events" id="events">
+      <div class="dots dots-up"></div>
+      <div class="dots dots-down"></div>
+      <h2 class="main-title">Latest Events</h2>
+      <div class="container">
+        <img decoding="async" src="imgs/events.png" alt="" />
+        <div class="info">
+          <div class="time">
+            <div class="unit">
+              <span>15</span>
+              <span>Days</span>
+            </div>
+            <div class="unit">
+              <span>08</span>
+              <span>Hours</span>
+            </div>
+            <div class="unit">
+              <span>45</span>
+              <span>Minutes</span>
+            </div>
+            <div class="unit">
+              <span>55</span>
+              <span>Seconds</span>
+            </div>
+          </div>
+          <h2 class="title">Tech Masters Event 2023</h2>
+          <p class="description">
+            Join us at Tech Masters Event 2023, the ultimate gathering for technology enthusiasts and professionals from all around the world. 
+            This year's event promises to be bigger and better than ever before, with top industry experts sharing their insights and experiences in a series of keynote speeches, workshops, and panel discussions.
+             Don't miss this opportunity to network with like-minded individuals, explore the latest tech trends and innovations, and gain valuable knowledge and skills that will help you stay ahead in today's fast-paced digital landscape.
+          </p>
+        </div>
+        <div class="subscribe">
+          <form action="">
+            <input type="email" placeholder="Enter Your Email" />
+            <input type="submit" value="Subscribe" />
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- End Events -->
+    <!-- Start Pricing -->
+    <div class="pricing" id="pricing">
+      <div class="dots dots-up"></div>
+      <div class="dots dots-down"></div>
+      <h2 class="main-title">Pricing Plans</h2>
+      <div class="container">
+        <div class="box">
+          <div class="title">Basic</div>
+          <img decoding="async" src="imgs/hosting-basic.png" alt="" />
+          <div class="price">
+            <span class="amount">$15</span>
+            <span class="time">Per Month</span>
+          </div>
+          <ul>
+            <li>10GB HDD Space</li>
+            <li>5 Email Addresses</li>
+            <li>2 Subdomains</li>
+            <li>4 Databases</li>
+            <li>Basic Support</li>
+          </ul>
+          <a href="#">Choose Plan</a>
+        </div>
+        <div class="box popular">
+          <div class="label">Most Popular</div>
+          <div class="title">Advanced</div>
+          <img decoding="async" src="imgs/hosting-advanced.png" alt="" />
+          <div class="price">
+            <span class="amount">$25</span>
+            <span class="time">Per Month</span>
+          </div>
+          <ul>
+            <li>20GB HDD Space</li>
+            <li>10 Email Addresses</li>
+            <li>5 Subdomains</li>
+            <li>8 Databases</li>
+            <li>Advanced Support</li>
+          </ul>
+          <a href="#">Choose Plan</a>
+        </div>
+        <div class="box">
+          <div class="title">Professional</div>
+          <img decoding="async" src="imgs/hosting-professional.png" alt="" />
+          <div class="price">
+            <span class="amount">$45</span>
+            <span class="time">Per Month</span>
+          </div>
+          <ul>
+            <li>50GB HDD Space</li>
+            <li>20 Email Addresses</li>
+            <li>10 Subdomains</li>
+            <li>20 Databases</li>
+            <li>Professional Support</li>
+          </ul>
+          <a href="#">Choose Plan</a>
+        </div>
+      </div>
+    </div>
+    <!-- End Pricing -->
+    <!-- Start Stats -->
+    <div class="stats" id="stats">
+      <h2>Our Awesome Stats</h2>
+      <div class="container">
+        <div class="box">
+          <i class="far fa-user fa-2x fa-fw"></i>
+          <span class="number">300</span>
+          <span class="text">Clients</span>
+        </div>
+        <div class="box">
+          <i class="fas fa-code fa-2x fa-fw"></i>
+          <span class="number">400</span>
+          <span class="text">Projects</span>
+        </div>
+        <div class="box">
+          <i class="fas fa-globe-asia fa-2x fa-fw"></i>
+          <span class="number">12</span>
+          <span class="text">Countries</span>
+        </div>
+        <div class="box">
+          <i class="far fa-money-bill-alt fa-2x fa-fw"></i>
+          <span class="number">500K</span>
+          <span class="text">Money</span>
+        </div>
+      </div>
+    </div>
+    <!-- End Stats -->
+    <!-- Start Discount -->
+    <div class="discount" id="discount">
+      <div class="image">
+        <div class="content">
+          <h2>We Have A Discount</h2>
+          <p>
+            "Exciting news for all tech enthusiasts and businesses alike! We are thrilled to announce that our partner company,
+             which specializes in software services, is now offering a limited-time discount. Whether you're looking to upgrade your existing systems, develop custom software solutions,
+            or leverage the latest technologies to drive business growth, this discount is the perfect opportunity to take your tech game to the next level. Don't miss out on this chance to save big while enjoying high-quality software services from a trusted industry leader.
+              Contact us today to learn more and claim your discount!"
+          </p>
+          <img decoding="async" src="imgs/discount.png" alt="" />
+        </div>
+      </div>
+      <div class="form">
+        <div class="content">
+          <h2>Request A Discount</h2>
+          <form action="">
+            <input class="input" type="text" placeholder="Your Name" name="name" />
+            <input class="input" type="email" placeholder="Your Email" name="email" />
+            <input class="input" type="text" placeholder="Your Phone" name="mobile" />
+            <textarea class="input" placeholder="Tell Us About Your Needs" name="message"></textarea>
+            <input type="submit" value="Send" />
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- End Discount -->
+ <!-- Start Footer -->
+ <div class="footer">
+  <div class="container">
+    <div class="box">
+      <h3>CodeCrafters</h3>
+      <ul class="social">
+        <li>
+          <a href="#" class="facebook">
+            <i class="fab fa-facebook-f"></i>
+            <img decoding="async" width="50" height="50" src="imgs/th.JPG" alt="" />
+          </a>
+        </li>
+        <li>
+          <a href="#" class="twitter">
+            <i class="fab fa-twitter"></i>
+            <img decoding="async" width="50" height="50" src="imgs/th (1).JPG" alt="" />
+          </a>
+        </li>
+        <li>
+          <a href="#" class="youtube">
+            <i class="fab fa-youtube"></i>
+            <img decoding="async" width="50" height="50" src="imgs/th (2).JPG" alt="" />
+
+          </a>
+        </li>
+      </ul>
+      <p class="text">
+        Discover our cutting-edge software solutions and take your business to the next level. </p>
+    </div>
+        <div class="box">
+          <ul class="links">
+            <li><a href="#">Important Link 1</a></li>
+            <li><a href="#">Important Link 2</a></li>
+            <li><a href="#">Important Link 3</a></li>
+            <li><a href="#">Important Link 4</a></li>
+            <li><a href="#">Important Link 5</a></li>
+          </ul>
+        </div>
+        <div class="box">
+          <div class="line">
+            <i class="fas fa-map-marker-alt fa-fw"></i>
+            <div class="info">Iraq , baghdad , University of Baghdad</div>
+          </div>
+          <div class="line">
+            <i class="far fa-clock fa-fw"></i>
+            <div class="info">Business Hours: From 10:00 To 18:00</div>
+          </div>
+          <div class="line">
+            <i class="fas fa-phone-volume fa-fw"></i>
+            <div class="info">
+              <span>+9647500281868</span>
+              <span>+9647717282328</span>
+            </div>
+          </div>
+        </div>
+        <div class="box footer-gallery">
+          <img decoding="async" src="imgs/gallery-01.png" alt="" />
+          <img decoding="async" src="imgs/gallery-02.png" alt="" />
+          <img decoding="async" src="imgs/gallery-03.jpg" alt="" />
+          <img decoding="async" src="imgs/gallery-04.png" alt="" />
+          <img decoding="async" src="imgs/gallery-05.jpg" alt="" />
+          <img decoding="async" src="imgs/gallery-06.png" alt="" />
+        </div>
+      </div>
+      <p class="copyright">Made With &lt;3 By Anas</p>
+    </div>
+    <!-- End Footer -->
+  </body>
+</html>
